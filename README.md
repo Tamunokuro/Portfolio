@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Description the project.
+> This is a Portfolio project.
 
 
 ## Built With
@@ -23,31 +23,12 @@ To get a local copy up and running follow these simple example steps.
 - Node Package Manager
 - GIT
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
-
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Tamunokuro)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/joshua-blue-jack)
 
 ## 🤝 Contributing
 
