@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.
 ## Authors
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/Tamunokuro)
+- GitHub: [@Tamunokuro](https://github.com/Tamunokuro)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/joshua-blue-jack)
 
 ## 🤝 Contributing
