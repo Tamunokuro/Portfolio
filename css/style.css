@@ -11,6 +11,7 @@ body {
   background-image: url(img/header-shapes\ mobile.png);
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif; 
+
 }
 
 nav {
@@ -61,7 +62,7 @@ a.logo:hover {
 #intro-connect {
   color: #7f8cff;
   margin: 0px 24px 5px 24px;
-  font-weight: 50;
+ 
 }
 
 .socials {
@@ -70,4 +71,6 @@ a.logo:hover {
   margin-left: 22px;
 }
 
-@media (min-width: 362px){/*Mobile View*/}
+@media (min-width: 362px) { 
+  /* Mobile View */ 
+}
