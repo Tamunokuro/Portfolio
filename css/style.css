@@ -75,6 +75,94 @@ a.logo:hover {
   margin-left: 22px;
 }
 
+.works-container {
+  padding: 16px;
+  align-items: center;
+  gap: 12px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+h1.card-title {
+  color: #172b4d;;
+}
+
+.work-details {
+  display: flex;
+}
+
+.work-item {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 5px;
+  color: #7a869a;
+  line-height: 16px;
+}
+
+.counter {
+  border-radius: 30px;
+  width: 8px;
+  height: 8px;
+  margin-top: 7px;
+  background: #c1c7d0;
+}
+
+.work-description {
+  color: #344563;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+.work-writeup {
+  color: #344563;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px;
+}
+
+#tool {
+  background-color: #ebebff;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.work-button {
+  display: flex;
+  letter-spacing: 0.03em;
+  color: #396df2;
+  text-decoration: none;
+  width: 100px;
+  height: 24px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.work-tools {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  display: flex;  
+}
+
+#projects {
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  border-style: 5px solid #396DF2;
+  border: 1px solid #396df2;
+  width: 120px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
 @media (min-width: 362px) {
   /* Mobile View */
 }
