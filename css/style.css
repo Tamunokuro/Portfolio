@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -19,21 +18,21 @@ nav {
 
 .navbar {
   display: inline-flex;
-  justify-content: space-around;
 }
 
 .socials li {
   margin-right: 15px;
 }
 
-ul.navbar li {
+ul.navbar {
   list-style: none;
   margin: 10px;
 }
 
-.toggler-icon {
+a.toggler-icon {
   color: #6070ff;
-  margin-left: 180px;
+  display: flex;
+  justify-content: flex-end; 
 }
 
 a.logo {
@@ -41,7 +40,7 @@ a.logo {
   font-weight: bold;
   color: #6070ff;
   text-decoration: none;
-  margin-right: 70px;
+  margin-right: 250px;
 }
 
 a.logo:hover {
@@ -51,16 +50,23 @@ a.logo:hover {
 #intro {
   color: #172b4d;
   margin: 150px 24px 12px 24px;
+  font-size: 40px;
+  line-height: 52px;
 }
 
 #intro-details {
   margin: 12px 24px 12px 24px;
   color: #344563;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #intro-connect {
-  color: #7f8cff;
+  color:  #7F8CFF;
   margin: 1px 24px 5px 24px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .socials {
