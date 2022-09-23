@@ -209,7 +209,8 @@ h1.card-title {
   display: flex;
 }
 
-/* Idea gotten from W#schools*/
+/* Idea gotten from W3schools*/
+
 .lang-arrow {
   border: solid #acb7c3;
   border-width: 0 3px 3px 0;
@@ -219,18 +220,16 @@ h1.card-title {
 }
 
 .lang-arrow-html {
-  border: solid #acb7C3;
+  border: solid #acb7c3;
   border-width: 0 3px 3px 0;
-  display: inline-block;
   padding: 3px;
   margin-left: 140px;
   display: flex;
 }
 
 .lang-arrow-css {
-  border: solid #acb7C3;
+  border: solid #acb7c3;
   border-width: 0 3px 3px 0;
-  display: inline-block;
   padding: 3px;
   margin-left: 150px;
   display: flex;
