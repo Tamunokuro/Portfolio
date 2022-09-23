@@ -80,6 +80,7 @@ a.logo:hover {
   padding: 20px;
   display: grid;
   background-color: #fff;
+  margin-top: 88px;
 }
 
 .card {
@@ -89,6 +90,11 @@ a.logo:hover {
 
 h1.card-title {
   color: #172b4d;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  order: 0;
+  flex-grow: 0;
 }
 
 .work-details {
@@ -101,6 +107,14 @@ h1.card-title {
   padding: 5px;
   color: #7a869a;
   line-height: 16px;
+}
+
+.work-writeup {
+  line-height: 24px;
+  font-size: 15px;
+  font-weight: 400;
+  order: 1;
+  flex-grow: 0;
 }
 
 .counter {
@@ -160,8 +174,8 @@ h1.card-title {
   text-align: center;
   border: 1px solid #396df2;
   width: 120px;
-  padding: 5px;
-  margin-top: 20px;
+  padding: 10px 5px;
+  margin: 10px;
 }
 
 .resume-button {
