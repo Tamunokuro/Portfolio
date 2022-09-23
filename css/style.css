@@ -110,9 +110,11 @@ h1.card-title {
 }
 
 .work-writeup {
-  line-height: 24px;
-  font-size: 15px;
+  color: #344563;
   font-weight: 400;
+  font-size: 16px;
+  padding: 5px;
+  line-height: 24px;
   order: 1;
   flex-grow: 0;
 }
@@ -131,13 +133,6 @@ h1.card-title {
   font-size: 13px;
   padding: 5px;
   line-height: 16px;
-}
-
-.work-writeup {
-  color: #344563;
-  font-weight: 400;
-  font-size: 16px;
-  padding: 5px;
 }
 
 #tool {
