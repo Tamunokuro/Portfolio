@@ -153,10 +153,9 @@ h1.card-title {
 }
 
 #projects {
-  border-radius: 5px;
+  border-radius: 10px;
   align-items: center;
   text-align: center;
-  border-style: 5px solid #396DF2;
   border: 1px solid #396df2;
   width: 120px;
   padding: 5px;
