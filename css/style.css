@@ -179,8 +179,6 @@ h1.card-title {
   border: 1px solid #396df2;
   width: 200px;
   padding: 5px;
-  /* margin-left: 20px;
-  margin-top: 20px; */
   margin: 20px;
 }
 
@@ -195,11 +193,10 @@ h1.card-title {
 .languages {
   list-style: none;
   margin: 40px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .language {
-  padding: 5px;
   background-color: #f7f7f9;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -212,12 +209,31 @@ h1.card-title {
   display: flex;
 }
 
+/* Idea gotten from W#schools*/
 .lang-arrow {
+  border: solid #acb7c3;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  margin-left: 100px;
+  display: flex;
+}
+
+.lang-arrow-html {
   border: solid #acb7C3;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  
+  margin-left: 140px;
+  display: flex;
+}
+
+.lang-arrow-css {
+  border: solid #acb7C3;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 150px;
+  display: flex;
 }
 
 .right {
