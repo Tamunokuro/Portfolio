@@ -78,7 +78,9 @@ a.logo:hover {
 .works-container {
   padding: 16px;
   align-items: center;
-  gap: 12px;
+  padding: 20px;
+  display: grid;
+  background-color: #ffffff;
 }
 
 .card {
@@ -130,6 +132,7 @@ h1.card-title {
   border-radius: 8px;
   padding: 10px;
   margin: 5px;
+  list-style: none;
 }
 
 .work-button {
