@@ -176,6 +176,14 @@ h1.card-title {
   margin: 10px;
 }
 
+#projects:hover {
+  background-color: #396df2;
+}
+
+.work-button:hover {
+  color: #fff;
+}
+
 .resume-button {
   display: flex;
   letter-spacing: 0.03em;
@@ -192,6 +200,15 @@ h1.card-title {
   width: 200px;
   padding: 5px;
   margin: 20px;
+}
+
+#resume:hover {
+  background-color: #396df2;
+  transition: 0.7s;
+}
+
+.resume-button:hover {
+  color: #fff;
 }
 
 #language-section {
@@ -227,7 +244,7 @@ h1.card-title {
   border: solid #acb7c3;
   border-width: 0 3px 3px 0;
   padding: 3px;
-  margin-left: 100px;
+  margin-left: 110px;
   display: flex;
 }
 
@@ -235,15 +252,16 @@ h1.card-title {
   border: solid #acb7c3;
   border-width: 0 3px 3px 0;
   padding: 3px;
-  margin-left: 140px;
+  margin-left: 150px;
   display: flex;
+  align-items: center;
 }
 
 .lang-arrow-css {
   border: solid #acb7c3;
   border-width: 0 3px 3px 0;
   padding: 3px;
-  margin-left: 150px;
+  margin-left: 160px;
   display: flex;
 }
 
