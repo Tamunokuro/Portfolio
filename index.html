@@ -10,8 +10,11 @@
 </head>
 <body>
     <style>
-        body{
-            background-image: url(img/header-shapes\ mobile.png);
+        body {
+            background-image: url(img/header-shapes-mobile.png);
+        }
+        form {
+            background-image: url(img/header-shapes-mobile.png);
         }
     </style>
 
@@ -23,6 +26,7 @@
             </ul>
         </nav>
     </header>
+    <main>
     <section>
         <h1 id="intro">I'm Joshua<br>Glad to see you!</h1>
         <p id="intro-details">I’m a software developer!
@@ -156,9 +160,18 @@
             <div>
                 <p id="language-section">Languages</p>
                 <ul class="languages">
-                    <li class="language"><img src="img/Ellipse 1.png" alt="JavaScript">JavaScript <a href=""><i class="lang-arrow right"></i><a></li>
-                    <li class="language"><img src="img/Ellipse 2.png" alt="HTML">HTML <a href=""><i class="lang-arrow-html right"></i><a></li>
-                    <li class="language"><img src="img/Ellipse 3.png" alt="CSS">CSS <a href=""><i class="lang-arrow-css right"></i><a></li>
+                    <li class="language">
+                        <img src="img/Ellipse 1.png" alt="JavaScript">JavaScript 
+                        <a href=""><i class="lang-arrow right"></i><a>
+                    </li>
+                    <li class="language">
+                        <img src="img/Ellipse 2.png" alt="HTML">HTML 
+                        <a href=""><i class="lang-arrow-html right"></i><a>
+                    </li>
+                    <li class="language">
+                        <img src="img/Ellipse 3.png" alt="CSS">CSS 
+                        <a href=""><i class="lang-arrow-css right"></i><a>
+                    </li>
                 </ul>
                 <div class="framework">
                     <p id="framework-section">Frameworks </p>
@@ -167,10 +180,41 @@
                 <div class="framework">
                 <p id="framework-section">Skills</p>
                 </div>
-                
-
             </div>
-    </section>
+        </section>
+
+       <form action="https://formspree.io/f/mzbwrodq" method="post">
+        <div class="form-section">
+        <h2 class="form-header">Contact Me</h2>
+        <p>If you have an application you are interested in developing, 
+            a feature that you need built or a project that needs coding. 
+            I’d love to help with it </p>
+        <ul>
+            <li>
+                <label for="name">
+                 <input type="text" name="User_name" id="name" placeholder="Yeremias" maxlength="30" required>
+                </label>
+            </li>
+            <li>
+                <label for="mail">
+                    <input type="email" id="mail" name="User_email" placeholder="natajayanj14@gmail.com" required>
+                </label>
+            </li>
+            <li>
+                <label for="msg">
+                   <textarea name="User_message" id="msg" cols="30" rows="10" maxlength="500" placeholder="Write your message here" required></textarea>
+                </label>
+            </li>
+            <li class="button">
+                <button type="submit">Get in touch</button>
+            </li>
+
+        </ul>
+        </div>
+
+       </form>
+    
+</main>
    
     
 </body>
