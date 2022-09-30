@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  line-height:50px;
+  line-height: 50px;
 }
 
 h2 {
@@ -52,28 +52,35 @@ nav {
 }
 
 #intro-details {
- animation-duration: 3s;
- animation-name: slidein;
- animation-iteration-count: 1;
- animation-direction: formards;
+  margin: 12px 0;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 20px;
+  color: #344563;
+  width: 820px;
+  height: 100px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: formards;
 }
 
 @keyframes slidein {
-from {
-  margin-left: 100%;
-  width: 300%;
+
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
-to {
-  margin-left: 0%;
-  width: 100%;
-}
-
-}
-
- .humburger {
+.humburger {
   display: none;
- }
+}
 
 .socials li {
   display: flex;
@@ -97,8 +104,6 @@ a.logo {
   font-weight: bold;
   color: #6070ff;
   text-decoration: none;
-  /* margin-left: 100px;
-  margin-right: 850px; */
   align-items: center;
   text-align: center;
 }
@@ -128,16 +133,6 @@ a.logo:hover {
 .intro-name {
   margin: auto;
   padding: auto;
-}
-
-#intro-details {
-  margin: 12px 0;
-  font-weight: 400;
-  line-height: 24px;
-  font-size: 20px;
-  color: #344563;
-  width: 820px;
-  height: 100px;
 }
 
 .connect {
@@ -486,7 +481,6 @@ button:hover {
   }
 
   .navbar-nav {
-    display: flex;
     flex-direction: row;
     display: none;
     justify-content: space-between;
