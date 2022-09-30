@@ -38,6 +38,10 @@ nav {
   margin-right: 10px;
 }
 
+.nav-link:hover {
+  font-size: 17px;
+}
+
 .socials li {
   display: flex;
   flex-direction: column;
