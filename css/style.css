@@ -457,6 +457,25 @@ button {
   align-items: center;
 }
 
+#intro-details {
+  animation-duration: 3s;
+ animation-name: slidein;
+ animation-iteration-count:infinite;
+ animation-direction: alternate;
+}
+@keyframes slidein {
+from {
+  margin-left: 100%;
+  width: 300%;
+}
+
+to {
+  margin-left: 0%;
+  width: 100%;
+}
+
+}
+
 @media screen and (max-width: 712px) {
   .navbar {
     flex-direction: column;
