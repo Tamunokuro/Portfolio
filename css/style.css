@@ -11,8 +11,9 @@ body {
 }
 
 h2 {
-  color: #091E42;
+  color: #091e42;
 }
+
 nav {
   display: flex;
 }
@@ -81,7 +82,7 @@ a.logo:hover {
   align-items: center;
 }
 
-.introsection-text{
+.introsection-text {
   width: 920px;
   height: 112px;
   padding-top: 300px;
@@ -114,6 +115,7 @@ a.logo:hover {
   color: #7f8cff;
   font-size: 16px;
   font-weight: 500;
+  
   /* width: 117px; */
   height: 24px;
   line-height: 24px;
@@ -131,7 +133,6 @@ a.logo:hover {
 .socials {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   list-style: none;
   padding-top: 0px;
   height: 20px;
@@ -252,12 +253,12 @@ h5 {
 }
 
 #intro-details-foot {
-    font-weight: 400;
-    line-height: 28px;
-    font-size: 20px;
-    color: #344563;
-    width: 447px;
-    height: 180px;
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 20px;
+  color: #344563;
+  width: 447px;
+  height: 180px;
 }
 
 .work-button {
@@ -271,12 +272,6 @@ h5 {
   margin: 5px;
 }
 
-.work-button:hover, 
-#projects:hover {
-  background-color: #396df2;
-  color: #fff;
-}
-
 #projects {
   border-radius: 10px;
   align-items: center;
@@ -285,6 +280,12 @@ h5 {
   width: 120px;
   padding: 10px 5px;
   margin: 10px;
+}
+
+.work-button:hover,
+#projects:hover {
+  background-color: #396df2;
+  color: #fff;
 }
 
 .resume-button {
@@ -306,7 +307,7 @@ h5 {
 }
 
 #resume:hover,
-.resume-button:hover{
+.resume-button:hover {
   background-color: #396df2;
   color: #fff;
 }
@@ -335,7 +336,6 @@ h5 {
   color: #253858;
   font-size: 15px;
   font-weight: 500;
-  /* align-items: center; */
   width: 130px;
   height: 120px;
 }
@@ -378,8 +378,8 @@ h5 {
 }
 
 form {
+  background-image: url(../img/Header\ bg@2x.png);
   background-color: #6070ff;
-  background-repeat: no-repeat;
   border-top-left-radius: 60px;
   margin-top: 113px;
   align-items: center;
@@ -439,10 +439,6 @@ textarea {
   width: 327px;
 }
 
-form {
-  background-image: url(../img/Header\ bg@2x.png);
-}
-
 button {
   width: 140px;
   height: 48px;
@@ -459,7 +455,7 @@ button {
 }
 
 @media screen and (max-width: 712px) {
-  .navbar{
+  .navbar {
     flex-direction: column;
   }
 
@@ -511,7 +507,6 @@ button {
   #intro-section {
     width: 295px;
     height: 250px;
-    /* margin: 12px 24px 12px 6px; */
   }
 
   #intro-details-foot {
@@ -541,7 +536,8 @@ button {
     flex-grow: 0;
   }
 
-  .about-self, .about-self-content{
+  .about-self, 
+  .about-self-content {
     display: flex;
     flex-direction: column;
   }
@@ -554,7 +550,6 @@ button {
   .language {
     flex: 1;
     width: 303px;
-    /* height: 66px; */
     display: inline-flex;
     flex-direction: row;
     margin-bottom: 5px;
@@ -580,5 +575,4 @@ button {
     width: 345px;
     line-height: 30px;
   }
-
 }
