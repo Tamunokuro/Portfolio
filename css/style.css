@@ -57,12 +57,9 @@ nav {
   margin-right: 10px;
 }
 
-.nav-link {
-  transition: all 0.3s;
-}
-
 .nav-link:hover {
   font-size: 17px;
+  transition: all 0.3s;
 }
 
 .humburger {
@@ -389,7 +386,7 @@ footer {
 }
 
 form {
-  background: #6070ff url("../img/desktop-footer-image.png");
+  background: #6070ff url("../img/Header\ bg@2x.png");
   background-size: cover;
   border-top-left-radius: 60px;
   align-items: center;
@@ -613,6 +610,10 @@ button:hover {
   }
 
   .introsection {
+    background: #fff url("../img/header-shapes-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom-left-radius: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
