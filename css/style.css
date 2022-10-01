@@ -461,7 +461,6 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-
   nav {
     position: initial;
     background: #fff;
@@ -474,6 +473,7 @@ button:hover {
   .humburger {
     display: initial;
   }
+
   .navbar {
     display: flex;
     flex-direction: row;
@@ -576,7 +576,7 @@ button:hover {
   .work-button {
     margin: 0;
   }
-  
+
   .about-self,
   .about-self-content {
     display: flex;
