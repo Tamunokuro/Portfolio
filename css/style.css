@@ -1,18 +1,19 @@
-@import url('http://fonts.googleapis.com/css?family=Poppins:wght@300,400,500,700');
+@import url("http://fonts.googleapis.com/css?family=Poppins:wght@300,400,500,700");
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: #e5e5e5;
+  position: relative;
 }
 
 h1 {
   line-height: 50px;
-  font-weight: 700px;
 }
 
 h2 {
@@ -20,9 +21,15 @@ h2 {
 }
 
 nav {
+  background-color: #fff;
   width: 100%;
-  min-height: 48px;
   align-items: center;
+  min-height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 155px;
+  top: 0;
+  left: 0;
 }
 
 .navbar {
@@ -33,10 +40,10 @@ nav {
 
 .navbar-nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   list-style: none;
   text-align: center;
+  gap: 32px;
 }
 
 .nav-item a {
@@ -50,32 +57,7 @@ nav {
 
 .nav-link:hover {
   font-size: 17px;
-}
-
-#intro-details {
-  margin: 12px 0;
-  font-weight: 400;
-  line-height: 24px;
-  font-size: 20px;
-  color: #344563;
-  width: 820px;
-  height: 100px;
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 1;
-  animation-direction: formards;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+  transition: all 0.3s;
 }
 
 .humburger {
@@ -93,12 +75,6 @@ ul.navbar {
   margin: 10px;
 }
 
-img .toggler-icon {
-  color: #6070ff;
-  display: flex;
-  justify-content: flex-end;
-}
-
 a.logo {
   display: flex;
   font-weight: bold;
@@ -113,13 +89,14 @@ a.logo:hover {
 }
 
 .introsection {
-  background: url("../img/Header\ bg@2x.png");
+  background: #fff url("../img/Header\ bg@2x.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom-left-radius: 30px;
-  width: 90%;
-  height: 100vh;
-  margin: auto;
+  background-size: contain;
+  border-bottom-left-radius: 100px;
+  width: 100vw;
+  min-height: 120vh;
+  padding: 0 240px;
+  margin-bottom: 142px;
 }
 
 .introsection-text {
@@ -133,6 +110,16 @@ a.logo:hover {
 .intro-name {
   margin: auto;
   padding: auto;
+}
+
+.intro-details {
+  margin: 12px 0;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 20px;
+  color: #344563;
+  width: 820px;
+  height: 100px;
 }
 
 .connect {
@@ -150,6 +137,7 @@ a.logo:hover {
   font-weight: 500;
   height: 24px;
   line-height: 24px;
+  margin-bottom: 16px;
 }
 
 .connect-section {
@@ -177,6 +165,8 @@ a.logo:hover {
   letter-spacing: 0.03em;
   color: #6070ff;
   display: flex;
+  gap: 8px;
+  margin: 24px 0 48px 0;
 }
 
 .work-section {
@@ -187,19 +177,18 @@ a.logo:hover {
   width: min(90%, 70.5rem);
   border: 1px solid #dfe1e6;
   border-radius: 20px;
-  padding: 50px;
   margin-bottom: 142px;
 }
 
 .work-section-content {
-  display: grid;
-  grid-template-columns: auto;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 46px 48px 48px;
 }
 
-#snap {
-  width: 544px;
-  height: 448px;
+.snap {
+  width: 100%;
+  padding: 24px;
 }
 
 .about-self {
@@ -207,16 +196,16 @@ a.logo:hover {
   flex-direction: row;
   background-color: #fff;
   margin-inline: auto;
-  width: min(90%, 70.5rem);
+  width: 100%;
+  min-height: 80vh;
   padding: 50px;
-  margin-bottom: 160px;
+  border-top-right-radius: 100px;
 }
 
 .about-self-content {
   display: flex;
   flex-direction: column;
   flex-basis: 10%;
-  margin: auto;
 }
 
 .card {
@@ -239,13 +228,13 @@ h1.card-title {
 
 .work-details {
   display: flex;
-  margin: auto;
+  align-items: center;
+  gap: 12px;
 }
 
-h5 {
+.work-details h5 {
   font-weight: 500;
   font-size: 13px;
-  padding: 5px;
   color: #7a869a;
   line-height: 16px;
 }
@@ -262,7 +251,6 @@ h5 {
   border-radius: 30px;
   width: 8px;
   height: 8px;
-  margin-top: 7px;
   background: #c1c7d0;
 }
 
@@ -270,15 +258,13 @@ h5 {
   color: #344563;
   font-weight: 600;
   font-size: 13px;
-  padding: 5px;
   line-height: 16px;
 }
 
-#tool {
+.tool {
   background-color: #ebebff;
   border-radius: 8px;
   padding: 10px;
-  margin: 10px 10px 25px;
   list-style: none;
 }
 
@@ -300,8 +286,13 @@ h5 {
   border-radius: 8px;
   padding: 12px;
   font-weight: 500;
-  width: 200px;
-  margin: 10px;
+  width: 162px;
+  margin: 24px 0 24px 0;
+}
+
+.work-button {
+  display: inline-block;
+  width: 124px;
 }
 
 .work-button:hover {
@@ -335,7 +326,6 @@ h5 {
 
 .languages {
   list-style: none;
-  margin: auto;
   display: inline-flex;
 }
 
@@ -356,7 +346,6 @@ h5 {
   height: 48px;
 }
 
-/* Idea gotten from W3schools */
 .lang-arrow {
   border: solid #acb7c3;
   border-width: 0 3px 3px 0;
@@ -388,42 +377,43 @@ h5 {
   padding: 5px;
 }
 
+footer {
+  background: #fff;
+}
+
 form {
-  background-image: url(../img/Header\ bg@2x.png);
-  background-color: #6070ff;
-  border-top-left-radius: 60px;
-  margin-top: 113px;
+  background: #6070ff url("../img/Header\ bg@2x.png");
+  background-size: cover;
   align-items: center;
   text-align: center;
-  height: 846px;
   display: flex;
+  border-top-left-radius: 100px;
+}
+
+.inputs {
+  margin-top: 12px;
 }
 
 .form-section {
-  margin-left: 436px;
-}
-
-.form-section p {
-  color: #fff;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  padding: 12px 24px;
-  width: 569px;
-  height: 102px;
+  text-align: center;
 }
 
 .form-header {
+  height: 56px;
   margin-top: 103px;
-  margin-bottom: 12px;
-  width: 569px;
-  height: 102px;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   color: #fff;
-  text-align: center;
-  align-items: center;
+}
+
+.form-section p {
+  width: 569px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 12px 435px 12px 436px;
 }
 
 form ul {
@@ -434,10 +424,10 @@ input,
 textarea {
   width: 327px;
   height: 50px;
-  margin-bottom: 20px;
+  margin: 12px;
   border-radius: 8px;
   border: 1px solid #cfd8dc;
-  font: 1em 'Poppins', sans-serif;
+  font: 1em "Poppins", sans-serif;
   padding: 15px 38px 15px 16px;
 }
 
@@ -457,7 +447,7 @@ button {
   margin-bottom: 45px;
   background: #fff;
   border: 1px solid #6070ff;
-  font: 1em 'Poppins', sans-serif;
+  font: 1em "Poppins", sans-serif;
   font-weight: 500;
   color: #6070ff;
   font-size: 17px;
@@ -471,6 +461,19 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+  nav {
+    position: initial;
+    background: #fff;
+    padding: 0 14px;
+    top: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .humburger {
+    display: initial;
+  }
+
   .navbar {
     display: flex;
     flex-direction: row;
@@ -485,14 +488,6 @@ button:hover {
     text-align: center;
   }
 
-  .humburger {
-    display: flex;
-  }
-
-  a.logo {
-    margin: 10px;
-  }
-
   #top {
     padding-top: 300px;
   }
@@ -501,26 +496,33 @@ button:hover {
     max-width: 350px;
   }
 
+  .intro-details {
+    width: 327px;
+    height: auto;
+  }
+
+  .socials {
+    width: auto;
+    height: auto;
+  }
+
   form {
     flex-direction: column;
     align-items: center;
   }
 
   #form-details {
-    display: flex;
-    flex-wrap: wrap;
+    width: 327px;
+    height: 102px;
     font-size: 20px;
-    height: 200px;
-    text-align: center;
+    margin: 12px 24px 87px 24px;
   }
 
   .form-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-inline: 18% 10%;
-    text-align: center;
-    width: 100%;
-    height: 900px;
+    width: 375px;
   }
 
   #snap {
@@ -550,13 +552,14 @@ button:hover {
   .work-section {
     display: flex;
     flex-direction: column;
-    padding: 20px 10px;
-    margin: 88px 20px;
     background-color: #fff;
     border: 1px solid #dfe1e6;
     border-radius: 16px;
-    width: 327px;
-    height: 600px;
+    padding: 16px 16px 28px 16px;
+  }
+
+  .snap {
+    padding: 0;
   }
 
   .work-section-content {
@@ -567,6 +570,11 @@ button:hover {
     font-size: 16px;
     line-height: 24px;
     width: 100%;
+    padding: 0;
+  }
+
+  .work-button {
+    margin: 0;
   }
 
   .about-self,
@@ -598,13 +606,19 @@ button:hover {
   }
 
   .introsection {
+    background: #fff url("../img/header-shapes-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom-left-radius: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 24px;
   }
 
   .introsection-text {
     width: 100%;
     line-height: 30px;
+    padding-top: 114px;
   }
 }
