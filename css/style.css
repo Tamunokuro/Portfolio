@@ -23,12 +23,10 @@ h2 {
 nav {
   background-color: #fff;
   width: 100%;
-  min-height: 48px;
   align-items: center;
   min-height: 8vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 155px;
   top: 0;
   left: 0;
@@ -208,7 +206,6 @@ a.logo:hover {
   display: flex;
   flex-direction: column;
   flex-basis: 10%;
-  /* margin: auto; */
 }
 
 .card {
@@ -329,7 +326,6 @@ h1.card-title {
 
 .languages {
   list-style: none;
-  /* margin: auto; */
   display: inline-flex;
 }
 
@@ -388,7 +384,6 @@ footer {
 form {
   background: #6070ff url("../img/Header\ bg@2x.png");
   background-size: cover;
-  border-top-left-radius: 60px;
   align-items: center;
   text-align: center;
   display: flex;
@@ -466,6 +461,7 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+
   nav {
     position: initial;
     background: #fff;
@@ -485,7 +481,6 @@ button:hover {
   }
 
   .navbar-nav {
-    display: flex;
     flex-direction: row;
     display: none;
     justify-content: space-between;
@@ -581,6 +576,7 @@ button:hover {
   .work-button {
     margin: 0;
   }
+  
   .about-self,
   .about-self-content {
     display: flex;
