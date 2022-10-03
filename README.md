@@ -24,8 +24,7 @@ To get a local copy up and running follow these simple example steps.
 - GIT
 
 
-## Authors
-👤 **Author1**
+## Author
 
 - GitHub: [@Tamunokuro](https://github.com/Tamunokuro)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/joshua-blue-jack)
@@ -44,7 +43,6 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
 
 ## 📝 License
 
