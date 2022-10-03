@@ -10,6 +10,8 @@
 - HTML & CSS
 - LINTERS
 
+## Deployment link
+ https://tamunokuro.github.io/Portfolio/
 
 ## Getting Started
 
