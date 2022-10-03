@@ -122,6 +122,32 @@ a.logo:hover {
   height: 100px;
 }
 
+.intro-details {
+  margin: 12px 0;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 20px;
+  color: #344563;
+  width: 820px;
+  height: 100px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 .connect {
   padding-top: 200px;
   line-height: 24px;
