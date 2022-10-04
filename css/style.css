@@ -413,8 +413,18 @@ form {
   border-top-left-radius: 100px;
 }
 
+.label {
+  position: absolute;
+  opacity: 0;
+
+}
+
 .inputs {
   margin-top: 12px;
+}
+
+.inputs input {
+  z-index: 5;
 }
 
 input:invalid {
