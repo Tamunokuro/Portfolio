@@ -416,19 +416,10 @@ form {
 .label {
   position: absolute;
   opacity: 0;
-
 }
 
 .inputs {
   margin-top: 12px;
-}
-
-.inputs input {
-  z-index: 5;
-}
-
-input:invalid {
-  border: 1px solid red;
 }
 
 .form-section {
@@ -471,6 +462,14 @@ input::placeholder {
   color: #172b4d;
 }
 
+input:invalid {
+  border: 1px solid red;
+}
+
+.inputs input {
+  z-index: 5;
+}
+
 textarea {
   height: 170px;
   width: 327px;
@@ -496,7 +495,6 @@ button:hover {
   color: #fff;
   border: 1px solid #fff;
 }
-
 
 @media screen and (max-width: 768px) {
   nav {
