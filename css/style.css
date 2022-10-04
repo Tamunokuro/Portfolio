@@ -6,10 +6,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #e5e5e5;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -187,10 +192,11 @@ a.logo:hover {
 
 .work-section {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   background-color: #fff;
   margin-inline: auto;
-  width: min(90%, 70.5rem);
+  width: min(90%);
   border: 1px solid #dfe1e6;
   border-radius: 20px;
   margin-bottom: 142px;
@@ -203,6 +209,7 @@ a.logo:hover {
 }
 
 .snap {
+  flex: 1 1 0;
   width: 100%;
   padding: 24px;
 }
@@ -385,7 +392,7 @@ h1.card-title {
   border-bottom-width: thin;
 }
 
-#framework-section {
+.framework-section {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -410,7 +417,12 @@ form {
   margin-top: 12px;
 }
 
+input:invalid {
+  border: 1px solid red;
+}
+
 .form-section {
+  padding: 0 435px;
   text-align: center;
 }
 
@@ -424,12 +436,10 @@ form {
 }
 
 .form-section p {
-  width: 569px;
   color: #fff;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  margin: 12px 435px 12px 436px;
 }
 
 form ul {
@@ -474,7 +484,9 @@ button {
 button:hover {
   background-color: #396df2;
   color: #fff;
+  border: 1px solid #fff;
 }
+
 
 @media screen and (max-width: 768px) {
   nav {
@@ -527,7 +539,7 @@ button:hover {
     align-items: center;
   }
 
-  #form-details {
+  .form-details {
     width: 327px;
     height: 102px;
     font-size: 20px;
@@ -580,6 +592,7 @@ button:hover {
 
   .work-section-content {
     display: flex;
+    flex: 1 1 0;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
