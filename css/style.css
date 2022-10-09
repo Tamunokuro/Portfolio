@@ -558,7 +558,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     margin-inline: 18% 10%;
-    width: 375px;
   }
 
   #snap {
