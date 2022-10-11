@@ -138,7 +138,7 @@ a.logo:hover {
   line-height: 24px;
   font-size: 20px;
   color: #344563;
-  width: 820px;
+  width: 790px;
   height: 100px;
   animation-duration: 3s;
   animation-name: slidein;
@@ -425,7 +425,7 @@ form {
 }
 
 .form-section {
-  padding: 0 435px;
+  /* padding: 0 435px; */
   text-align: center;
 }
 
@@ -509,8 +509,9 @@ button:hover {
     padding: 0 14px;
     top: auto;
     left: auto;
-    /* width: 100%; */
   }
+
+  /* Humber Icon Animation */
 
   .humburger {
     display: block;
@@ -538,6 +539,7 @@ button:hover {
     transition: all 0.5s ease-in-out;
    }
 
+   /* Overlay functionality */
   .overlay {
     position: fixed;
     z-index: 1;
@@ -602,6 +604,8 @@ button:hover {
     width: auto;
     height: auto;
   }
+
+  /* Form Section */
 
   form {
     flex-direction: column;
