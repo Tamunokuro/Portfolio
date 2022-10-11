@@ -581,6 +581,10 @@ button:hover {
     margin-bottom: 10px;
   }
 
+  .nav-options .navbar-nav .nav-item .nav-link:hover {
+    font-size: 33px;
+  }
+
   #top {
     padding-top: 300px;
   }
