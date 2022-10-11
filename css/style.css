@@ -74,15 +74,15 @@ nav {
 }
 
 .menu-one,
-  .menu-two,
-  .menu-three {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #6070ff;
-    margin-top: 3px;
-    z-index: 2;
-  }
+.menu-two,
+.menu-three {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #6070ff;
+  margin-top: 3px;
+  z-index: 2;
+}
 
 .socials li {
   display: flex;
@@ -524,22 +524,22 @@ button:hover {
   }
 
   .humburger.active .menu-one {
-   transform: translateY(3px) rotate(45deg);
-   background-color: #fff;
-   z-index: 2;
-   position: fixed;
-   transition: all 0.7s ease-in-out;
+    transform: translateY(3px) rotate(45deg);
+    background-color: #fff;
+    z-index: 2;
+    position: fixed;
+    transition: all 0.7s ease-in-out;
   }
-   
+
   .humburger.active .menu-three {
     transform: translateY(-3px) rotate(-45deg);
     background-color: #fff;
     z-index: 2;
     position: fixed;
     transition: all 0.5s ease-in-out;
-   }
+  }
 
-   /* Overlay functionality */
+  /* Overlay functionality */
   .overlay {
     position: fixed;
     z-index: 1;
@@ -569,7 +569,7 @@ button:hover {
   }
 
   .navbar-nav.active {
-    left:28px;
+    left: 28px;
   }
 
   .nav-item {
