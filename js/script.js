@@ -18,6 +18,5 @@ navlink.forEach((nav) => {
     btnMenu.classList.toggle('active');
     navbar.classList.toggle('active');
     body.classList.toggle('overflow');
-  })
+  });
 });
-
