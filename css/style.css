@@ -77,10 +77,10 @@ nav {
 .menu-two,
 .menu-three {
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   background-color: #6070ff;
-  margin-top: 3px;
+  margin: 5px auto;
   z-index: 2;
 }
 
@@ -524,17 +524,15 @@ button:hover {
   }
 
   .humburger.active .menu-one {
-    transform: translateY(3px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
     background-color: #fff;
-    z-index: 2;
     position: fixed;
     transition: all 0.7s ease-in-out;
   }
 
   .humburger.active .menu-three {
-    transform: translateY(-3px) rotate(-45deg);
+    transform: translateY(-6.5px) rotate(-45deg);
     background-color: #fff;
-    z-index: 2;
     position: fixed;
     transition: all 0.5s ease-in-out;
   }
@@ -561,7 +559,7 @@ button:hover {
   .navbar-nav {
     position: fixed;
     left: -100%;
-    top: 200px;
+    top: 106px;
     gap: 0;
     flex-direction: column;
     width: 100vw;
