@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
   background: #e5e5e5;
@@ -35,6 +36,7 @@ nav {
   padding: 0 155px;
   top: 0;
   left: 0;
+  position: fixed;
 }
 
 .navbar {
@@ -504,7 +506,7 @@ button:hover {
   }
 
   nav {
-    position: initial;
+    position: fixed;
     background: #fff;
     padding: 0 14px;
     top: auto;

@@ -3,10 +3,10 @@ const btnMenu = document.querySelector('.humburger');
 const myoverlay = document.querySelector('#myoverlay');
 const body = document.querySelector('body');
 const navbar = document.querySelector('.navbar-nav');
-const navlink = document.querySelectorAll('.nav-link')
+const navlink = document.querySelectorAll('.nav-link');
 
 
-
+// Menu item function 
 btnMenu.addEventListener('click', function(e){
     e.preventDefault()
     btnMenu.classList.toggle("active");
