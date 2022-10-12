@@ -1,96 +1,39 @@
-const btnMenu = document.querySelector('.humburger');
-const myoverlay = document.querySelector('#myoverlay');
-const body = document.querySelector('body');
-const navbar = document.querySelector('.navbar-nav');
-const navlink = document.querySelectorAll('.nav-link');
-const myportfolio = document.getElementById('portfolio');
+import portfolioObj from "./projectsData.js";
+const btnMenu = document.querySelector(".humburger");
+const myoverlay = document.querySelector("#myoverlay");
+const body = document.querySelector("body");
+const navbar = document.querySelector(".navbar-nav");
+const navlink = document.querySelectorAll(".nav-link");
+const myportfolio = document.getElementById("portfolio");
+const modalContainer = document.getElementById("modal-section");
 
 // Menu item function
-btnMenu.addEventListener('click', () => {
-  btnMenu.classList.toggle('active');
-  navbar.classList.toggle('active');
-  myoverlay.classList.toggle('overlay');
-  body.classList.toggle('overflow');
+btnMenu.addEventListener("click", () => {
+  btnMenu.classList.toggle("active");
+  navbar.classList.toggle("active");
+  myoverlay.classList.toggle("overlay");
+  body.classList.toggle("overflow");
 });
 
 navlink.forEach((nav) => {
-  nav.addEventListener('click', () => {
-    myoverlay.classList.toggle('overlay');
-    btnMenu.classList.toggle('active');
-    navbar.classList.toggle('active');
-    body.classList.toggle('overflow');
+  nav.addEventListener("click", () => {
+    myoverlay.classList.toggle("overlay");
+    btnMenu.classList.toggle("active");
+    navbar.classList.toggle("active");
+    body.classList.toggle("overflow");
   });
 });
 
-// Details Pop-Up section
-const portfolioObj = [
-  {
-    workCardClass: 'work-section work-1',
-    mobileImg: '',
-    desktopImg: 'img/1.Snapshoot Portfolio.png',
-    separatorImg: 'img/separator-icon.png',
-    projectName: 'Tonic',
-    companyName: 'Canopy',
-    position: 'Back End Dev',
-    projectYear: 2015,
-    projectDetails: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    projectBtnText : 'See Project',
-    modalBtnText: 'See Live',
-    codeBtnText: 'See Source'
-  },
-  {
-    workCardClass: 'work-section reverse work-2',
-    mobileImg: '',
-    desktopImg: 'img/2.Snapshoot Portfolio.png',
-    separatorImg: 'img/separator-icon.png',
-    projectName: 'Multi-Post Stories',
-    companyName: 'FACEBOOK',
-    position: 'Full Stack Dev',
-    projectYear: 2015,
-    projectDetails: 'Experimental content creation feature that allows users' +
-    'to add to an existing story over the course of a day without spamming their friends.',
-    projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    projectBtnText : 'See Project',
-    modalBtnText: 'See Live',
-    codeBtnText: 'See Source'
-  },
-  {
-    workCardClass: 'work-section work-3',
-    mobileImg: '',
-    desktopImg: 'img/Snapshoot Portfolio5.png',
-    separatorImg: 'img/separator-icon.png',
-    projectName: 'Facebook 360',
-    companyName: 'FACEBOOK',
-    position: 'Full Stack Dev',
-    projectYear: 2015,
-    projectDetails: 'Exploring the future of media in Facebook\'s first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR',
-    projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    projectBtnText : 'See Project',
-    modalBtnText: 'See Live',
-    codeBtnText: 'See Source'
-  },
-  {
-    workCardClass: 'work-section work-4 reverse',
-    mobileImg: '',
-    desktopImg: 'img/ubersnapshot.png',
-    separatorImg: 'img/separator-icon.png',
-    projectName: 'Uber Navigation',
-    companyName: 'Uber',
-    position: 'Lead Developer',
-    projectYear: 2018,
-    projectDetails: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    projectBtnText : 'See Project',
-    modalBtnText: 'See Live',
-    codeBtnText: 'See Source'
+let workCard = "";
+let modalCard = "";
+let projectsId = [];
+let projectTitles = [];
+let companies = [];
 
-  }
-]
-
-let workCard = '';
-
-for(let portfolio of portfolioObj){
+for (let portfolio of portfolioObj) {
+  projectsId.push(portfolioObj.indexOf(portfolio));
+  projectTitles.push(portfolio.projectName);
+  companies.push(portfolio.companyName);
   workCard += `
   <div class="${portfolio.workCardClass}">
   <img class="snap" src="${portfolio.desktopImg}" alt="Snapshot of Project">
@@ -111,7 +54,7 @@ for(let portfolio of portfolioObj){
         <li class="tool">${portfolio.projectTools[2]}</li>
         <li class="tool">${portfolio.projectTools[3]}</li>
       </ul>
-      <a class="work-button" id="${portfolioObj.indexOf(portfolio).projectBtnText}" href="${portfolioObj.indexOf(portfolio)}">${portfolio.projectBtnText}</a>
+      <button data-set=${portfolio.id} class="work-button project-card-btn">${portfolio.projectBtnText}</button>
   </div>
 </div>
 </div>
@@ -120,5 +63,63 @@ for(let portfolio of portfolioObj){
 
 myportfolio.innerHTML = workCard;
 
-// Popup window
+const cardBtns = document.querySelectorAll(".project-card-btn");
+cardBtns.forEach((btn, index) => {
+  console.log(index);
+  btn.addEventListener("click", (e) => {
+    if (projectsId.includes(parseInt(e.target.dataset.set) - 1)) {
+      modalCard = `
+      <div class="modal">
+      <div class="card-body">
+        <span class="close-button">&times;</span>
+        <h2 class="card-title">${projectTitles[index]}</h2>
+        <div class="work-details">
+          <p class="work-description">${companies[index]}</p>
+          <img
+            class="separator-icon"
+            src="img/separator-icon.png"
+            alt="separator-icon"
+          />
+          <h3>Back End Dev</h3>
+          <img
+            class="separator-icon"
+            src="img/separator-icon.png"
+            alt="separator-icon"
+          />
+          <h3>2015</h3>
+        </div>
+      </div>
+      <img
+        class="snap"
+        src="img1.Snapshoot Portfolio.png"
+        alt="Snapshot of Project"
+      />
 
+      <div class="work-section-content">
+        <p class="work-writeup">
+          A daily selection of privately personalized reads; no accounts or
+          sign-ups required.
+        </p>
+        <div class="card-body">
+          <ul class="work-tools">
+            <li class="tool">html</li>
+            <li class="tool">css</li>
+            <li class="tool">javaScript</li>
+          </ul>
+          <a class="work-button" href=""
+            >See Live
+            <img src="img/live-icon.png" alt="See live project icon"
+          /></a>
+          <a class="work-button" href=""
+            >See Source
+            <img src="img/github-icon.png" alt="See source code icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+      `;
+      modalContainer.innerHTML = modalCard;
+      modalContainer.style.left = "0";
+    }
+  });
+});
