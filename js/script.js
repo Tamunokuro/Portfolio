@@ -1,41 +1,42 @@
-import portfolioObj from "./projectsData.js";
-const btnMenu = document.querySelector(".humburger");
-const myoverlay = document.querySelector("#myoverlay");
-const navbar = document.querySelector(".navbar-nav");
-const navlink = document.querySelectorAll(".nav-link");
-const myportfolio = document.getElementById("portfolio");
-const modalContainer = document.getElementById("modal-section");
+import portfolioObj from './projectsData.js';
 
+const btnMenu = document.querySelector('.humburger');
+const myoverlay = document.querySelector('#myoverlay');
+const navbar = document.querySelector('.navbar-nav');
+const navlink = document.querySelectorAll('.nav-link');
+const myportfolio = document.getElementById('portfolio');
+const modalContainer = document.getElementById('modal-section');
+const body = document.querySelector('body');
 // Menu item function
-btnMenu.addEventListener("click", () => {
-  btnMenu.classList.toggle("active");
-  navbar.classList.toggle("active");
-  myoverlay.classList.toggle("overlay");
-  body.classList.toggle("overflow");
+btnMenu.addEventListener('click', () => {
+  btnMenu.classList.toggle('active');
+  navbar.classList.toggle('active');
+  myoverlay.classList.toggle('overlay');
+  body.classList.toggle('overflow');
 });
 
 navlink.forEach((nav) => {
-  nav.addEventListener("click", () => {
-    myoverlay.classList.toggle("overlay");
-    btnMenu.classList.toggle("active");
-    navbar.classList.toggle("active");
-    body.classList.toggle("overflow");
+  nav.addEventListener('click', () => {
+    myoverlay.classList.toggle('overlay');
+    btnMenu.classList.toggle('active');
+    navbar.classList.toggle('active');
+    body.classList.toggle('overflow');
   });
 });
 
-let workCard = "";
-let modalCard = "";
-let projectsId = [];
-let projectTitles = [];
-let companies = [];
-let positions = [];
-let projectYears = [];
-let projectImgs = [];
-let projectTxts = [];
-let tools = [];
+let workCard = '';
+let modalCard = '';
+const projectsId = [];
+const projectTitles = [];
+const companies = [];
+const positions = [];
+const projectYears = [];
+const projectImgs = [];
+const projectTxts = [];
+const tools = [];
+const codeLink = [];
 
-
-for (let portfolio of portfolioObj) {
+for (const portfolio of portfolioObj) {
   projectsId.push(portfolioObj.indexOf(portfolio));
   projectTitles.push(portfolio.projectName);
   companies.push(portfolio.companyName);
@@ -44,6 +45,7 @@ for (let portfolio of portfolioObj) {
   projectImgs.push(portfolio.desktopImg);
   projectTxts.push(portfolio.projectDetails);
   tools.push(portfolio.projectTools);
+  codeLink.push(portfolio.sourceCode);
   workCard += `
   <div class="${portfolio.workCardClass}">
   <img class="snap" src="${portfolio.desktopImg}" alt="Snapshot of Project">
@@ -70,12 +72,9 @@ for (let portfolio of portfolioObj) {
 </div>
 `;
 }
-
 myportfolio.innerHTML = workCard;
-
 const cardBtns = document.querySelectorAll(".project-card-btn");
 cardBtns.forEach((btn, index) => {
-  console.log(index);
   btn.addEventListener("click", (e) => {
     if (projectsId.includes(parseInt(e.target.dataset.set) - 1)) {
       modalCard = `
@@ -120,8 +119,7 @@ cardBtns.forEach((btn, index) => {
             >See Live
             <img src="img/live-icon.png" alt="See live project icon"
           /></a>
-          <a class="work-button" href=""
-            >See Source
+          <a class="work-button" href='${codeLink[index]}' target= '_target'>See Source
             <img src="img/github-icon.png" alt="See source code icon"
           /></a>
         </div>
@@ -131,17 +129,13 @@ cardBtns.forEach((btn, index) => {
     modalContainer.innerHTML = modalCard;
     modalContainer.style.left = "0";
     const closeBtn = document.querySelector('.close-button');
-      closeBtn.addEventListener('click', () => { 
+      closeBtn.addEventListener('click', () => {
         modalContainer.style.left = "-100%";
-        }
-      );
-
-      modalContainer.addEventListener('click', () =>{
+        });
+      modalContainer.addEventListener('click', () => {
         modalContainer.style.left = "-100%";
       })
 
   }
   });
 });
-
-

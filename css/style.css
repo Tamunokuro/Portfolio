@@ -524,11 +524,10 @@ button:hover {
 .modal {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: min(90%);
   height: 100%;
   gap: 10px;
   border: 1px solid #dfe1e6;
-  border-radius: 20px;
   background-color: #fff;
   border-radius: 20px;
   overflow: scroll;
@@ -676,7 +675,6 @@ button:hover {
     font-size: 16px;
     padding: 5px;
     line-height: 24px;
-    /* order: 1; */
     flex-grow: 0;
     width: 295px;
   }
@@ -763,18 +761,4 @@ button:hover {
     line-height: 30px;
     padding-top: 114px;
   }
-}
-
-/* Modal Section */
-.modal {
-  display: flex;
-  flex-direction: column;
-  width: min(90%);
-  height: 100%;
-  gap: 10px;
-  border: 1px solid #dfe1e6;
-  border-radius: 20px;
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: scroll;
 }
