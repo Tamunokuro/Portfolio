@@ -15,7 +15,7 @@ const portfolioObj = [
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio'
+    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
   },
   {
     id: '2',
@@ -29,12 +29,12 @@ const portfolioObj = [
     projectYear: 2015,
     projectDetails:
       'Experimental content creation feature that allows users'
-      +'to add to an existing story over the course of a day without spamming their friends.',
+      + 'to add to an existing story over the course of a day without spamming their friends.',
     projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio'
+    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
   },
   {
     id: '3',
@@ -52,7 +52,7 @@ const portfolioObj = [
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio'
+    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
   },
   {
     id: '4',
@@ -70,7 +70,7 @@ const portfolioObj = [
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio'
+    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
   },
 ];
 

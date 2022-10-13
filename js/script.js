@@ -73,10 +73,10 @@ for (const portfolio of portfolioObj) {
 `;
 }
 myportfolio.innerHTML = workCard;
-const cardBtns = document.querySelectorAll(".project-card-btn");
+const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn, index) => {
-  btn.addEventListener("click", (e) => {
-    if (projectsId.includes(parseInt(e.target.dataset.set) - 1)) {
+  btn.addEventListener('click', (e) => {
+    if (projectsId.includes(parseInt(e.target.dataset.set) - 1), radix) {
       modalCard = `
       <div class="modal">
       <div class="card-body">
@@ -126,16 +126,15 @@ cardBtns.forEach((btn, index) => {
       </div>
     </div>
       `;
-    modalContainer.innerHTML = modalCard;
-    modalContainer.style.left = "0";
+      modalContainer.innerHTML = modalCard;
+      modalContainer.style.left = '0';
     const closeBtn = document.querySelector('.close-button');
       closeBtn.addEventListener('click', () => {
-        modalContainer.style.left = "-100%";
+        modalContainer.style.left = '-100%';
         });
       modalContainer.addEventListener('click', () => {
-        modalContainer.style.left = "-100%";
-      })
-
-  }
-  });
+        modalContainer.style.left = '-100%';
+      });
+      }
+      });
 });
