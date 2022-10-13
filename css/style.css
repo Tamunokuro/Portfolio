@@ -25,6 +25,13 @@ h2 {
   color: #091e42;
 }
 
+h3 {
+  font-weight: 500;
+  font-size: 15px;
+  color: #7a869a;
+  line-height: 16px;
+}
+
 nav {
   background-color: #fff;
   width: 100%;
@@ -35,6 +42,7 @@ nav {
   padding: 0 155px;
   top: 0;
   left: 0;
+  position: fixed;
 }
 
 .navbar {
@@ -169,6 +177,7 @@ a.logo:hover {
 
 #intro-connect {
   color: #7f8cff;
+  margin-top: 24px;
   font-size: 16px;
   font-weight: 500;
   height: 24px;
@@ -201,6 +210,7 @@ a.logo:hover {
   letter-spacing: 0.03em;
   color: #6070ff;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 24px 0 48px 0;
 }
@@ -231,6 +241,7 @@ a.logo:hover {
 
 .about-self {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   background-color: #fff;
   margin-inline: auto;
@@ -268,14 +279,15 @@ h1.card-title {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 24px;
 }
 
-.work-details h5 {
+/* .work-details h3 {
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   color: #7a869a;
   line-height: 16px;
-}
+} */
 
 .work-writeup {
   color: #344563;
@@ -311,7 +323,7 @@ h1.card-title {
   line-height: 28px;
   font-size: 20px;
   color: #344563;
-  width: 447px;
+  width: 596px;
   height: 180px;
 }
 
@@ -326,11 +338,6 @@ h1.card-title {
   font-weight: 500;
   width: 162px;
   margin: 24px 0 24px 0;
-}
-
-.work-button {
-  display: inline-block;
-  width: 124px;
 }
 
 .work-button:hover {
@@ -498,13 +505,49 @@ button:hover {
   border: 1px solid #fff;
 }
 
+/* Modal section */
+#modal-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(31, 31, 31, 0.451);
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow: scroll;
+  transition: all 0.4s ease;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: min(90%);
+  height: 100%;
+  gap: 10px;
+  border: 1px solid #dfe1e6;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: scroll;
+}
+
+.close-button {
+  font-size: 2.25rem;
+  color: #67798e;
+  cursor: pointer;
+  margin-right: 32px;
+  float: right;
+}
+
 @media screen and (max-width: 768px) {
   .overflow {
     overflow-y: hidden;
   }
 
   nav {
-    position: initial;
+    position: fixed;
     background: #fff;
     padding: 0 14px;
     top: auto;
@@ -611,7 +654,7 @@ button:hover {
   }
 
   .form-details {
-    width: 327px;
+    max-width: 80%;
     height: 102px;
     font-size: 20px;
     margin: 12px 24px 87px 24px;
@@ -632,7 +675,6 @@ button:hover {
     font-size: 16px;
     padding: 5px;
     line-height: 24px;
-    order: 1;
     flex-grow: 0;
     width: 295px;
   }
@@ -662,7 +704,6 @@ button:hover {
 
   .work-section-content {
     display: flex;
-    flex: 1 1 0;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
