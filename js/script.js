@@ -103,7 +103,7 @@ const portfolioObj = [
 const myportfolio = document.getElementById('portfolio');
 
 portfolioObj.forEach((child, index) => {
-  let card = `
+  card = `
   <div class="${child.workCardClass}">
   <img class="snap" src="${child.desktopImg}" alt="Snapshot of Project">
   <div class="work-section-content">
@@ -128,15 +128,14 @@ portfolioObj.forEach((child, index) => {
 </div>
 </div>
 `;
-myportfolio.innerHTML += card
+myportfolio.innerHTML += card;
 });
 
 const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    console.log('clicked')
-    let index = e.target.dataset.set;
-    let project = portfolioObj[index];
+    const index = e.target.dataset.set;
+    const project = portfolioObj[index];
       modalCard = `
       <div class="modal">
       <div class="card-body">
