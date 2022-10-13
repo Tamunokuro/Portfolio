@@ -76,7 +76,7 @@ myportfolio.innerHTML = workCard;
 const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn, index) => {
   btn.addEventListener('click', (e) => {
-    if (projectsId.includes(radix, parseInt(e.target.dataset.set) - 1)) {
+    if (projectsId.includes(8, parseInt(e.target.dataset.set) - 1)) {
       modalCard = `
       <div class="modal">
       <div class="card-body">
@@ -131,10 +131,10 @@ cardBtns.forEach((btn, index) => {
       const closeBtn = document.querySelector('.close-button');
       closeBtn.addEventListener('click', () => {
         modalContainer.style.left = '-100%';
-     });
+      });
       modalContainer.addEventListener('click', () => {
         modalContainer.style.left = '-100%';
       });
-  }
+    }
   });
 });
