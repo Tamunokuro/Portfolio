@@ -128,7 +128,7 @@ portfolioObj.forEach((child, index) => {
 </div>
 </div>
 `;
-myportfolio.innerHTML += card;
+  myportfolio.innerHTML += card;
 });
 
 const cardBtns = document.querySelectorAll('.project-card-btn');
@@ -136,7 +136,7 @@ cardBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const index = e.target.dataset.set;
     const project = portfolioObj[index];
-      modalCard = `
+    modalCard = `
       <div class="modal">
       <div class="card-body">
         <span class="close-button">&times;</span>
@@ -185,14 +185,14 @@ cardBtns.forEach((btn) => {
       </div>
     </div>
       `;
-      modalContainer.innerHTML = modalCard;
-      modalContainer.style.left = '0';
-      const closeBtn = document.querySelector('.close-button');
-      closeBtn.addEventListener('click', () => {
-        modalContainer.style.left = '-100%';
-      });
-      modalContainer.addEventListener('click', () => {
-        modalContainer.style.left = '-100%';
-      });
+    modalContainer.innerHTML = modalCard;
+    modalContainer.style.left = '0';
+    const closeBtn = document.querySelector('.close-button');
+    closeBtn.addEventListener('click', () => {
+      modalContainer.style.left = '-100%';
+    });
+    modalContainer.addEventListener('click', () => {
+      modalContainer.style.left = '-100%';
+    });
   });
 });
