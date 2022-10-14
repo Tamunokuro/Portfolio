@@ -541,6 +541,11 @@ button:hover {
   float: right;
 }
 
+.error {
+  color: #fff;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 768px) {
   .overflow {
     overflow-y: hidden;
