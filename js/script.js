@@ -244,4 +244,3 @@ if (contactInfo) {
   emailInput.value = contactInfo.email;
   messageInput.value = contactInfo.message;
 }
-
