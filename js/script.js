@@ -205,7 +205,7 @@ const mailError = document.querySelector('.error');
 const emailCaseChecker = () => {
   if (emailInput.value !== emailInput.value.toLowerCase()) {
     mailError.innerText = 'Email should be in lower case';
-    }
+  }
   else {
     mailError.innerText = '';
     form.submit();
