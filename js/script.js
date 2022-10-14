@@ -42,6 +42,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
   {
     id: '2',
@@ -61,6 +62,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
   {
     id: '3',
@@ -79,6 +81,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
   {
     id: '4',
@@ -97,6 +100,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
 ];
 
@@ -174,11 +178,11 @@ cardBtns.forEach((btn) => {
             <li class="tool">${project.projectTools[2]}</li>
             <li class="tool">${project.projectTools[3]}</li>
           </ul>
-          <a class="work-button" href=""
+          <a class="work-button" href='${project.seelive}' target='_blank'
             >See Live
             <img src="img/live-icon.png" alt="See live project icon"
           /></a>
-          <a class="work-button" href='${project.sourceCode}' target= '_target'>See Source
+          <a class="work-button" href='${project.sourceCode}' target= '_blank'>See Source
             <img src="img/github-icon.png" alt="See source code icon"
           /></a>
         </div>
@@ -215,3 +219,29 @@ form.addEventListener('submit', (e) => {
   emailCaseChecker();
   e.preventDefault();
 });
+
+// Local Storage
+const nameInput = document.getElementById('name');
+const messageInput = document.getElementById('msg');
+
+const store = () => {
+  const contactFormData = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    message: messageInput.value.trim(),
+  };
+  localStorage.setItem('contactFormData', JSON.stringify(contactFormData));
+}
+
+nameInput.addEventListener('keyup', store);
+emailInput.addEventListener('keyup', store);
+messageInput.addEventListener('keyup', store);
+
+const contactInfo = JSON.parse(localStorage.getItem('contactFormData'));
+
+if (contactInfo) {
+  nameInput.value = contactInfo.name;
+  emailInput.value = contactInfo.email;
+  messageInput.value = contactInfo.message;
+}
+
