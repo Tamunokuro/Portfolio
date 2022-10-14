@@ -196,3 +196,23 @@ cardBtns.forEach((btn) => {
     });
   });
 });
+
+// Form validation
+const form = document.querySelector('form');
+const emailInput = document.getElementById('mail');
+const mailError = document.querySelector('.error');
+form.addEventListener('submit', (e) => {
+  emailCaseChecker();
+  e.preventDefault();
+});
+
+const emailCaseChecker = () => {
+  if(emailInput.value !== emailInput.value.toLowerCase()){
+    mailError.innerText = 'Email should be in lower case';
+  } 
+  else{
+    mailError.innerText = '';
+    form.submit();
+  }
+}
+
