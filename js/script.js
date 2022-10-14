@@ -231,7 +231,7 @@ const store = () => {
     message: messageInput.value.trim(),
   };
   localStorage.setItem('contactFormData', JSON.stringify(contactFormData));
-}
+};
 
 nameInput.addEventListener('keyup', store);
 emailInput.addEventListener('keyup', store);
