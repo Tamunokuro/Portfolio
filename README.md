@@ -15,9 +15,9 @@
 
 ## Getting Started
 
-**Clone the repository using git clone**
+**Clone the repository using `git clone git@github.com:Tamunokuro/Portfolio.git`**
 **CD into the cloned repo and run git branch feature**
-**Run npm init -y**
+**Run `npm init -y`**
 
 To get a local copy up and running follow these simple example steps.
 
