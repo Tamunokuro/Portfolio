@@ -2,7 +2,7 @@
 
 # Porfolio Project
 
-> This is a Portfolio project.
+> This is my Portfolio built with HTML, CSS and JavaScript
 
 
 ## Built With
