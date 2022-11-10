@@ -2,7 +2,7 @@
 
 # Porfolio Project
 
-> This is a Portfolio project.
+> This is my Portfolio built with HTML, CSS and JavaScript
 
 
 ## Built With
@@ -10,12 +10,14 @@
 - HTML & CSS
 - LINTERS
 
+## Deployment link
+ [Porfolio](https://tamunokuro.github.io/Portfolio/)
 
 ## Getting Started
 
-**Clone the repository using git clone**
-**CD into the cloned repo and run git branch feature**
-**Run npm init -y**
+- **Clone the repository using `git clone git@github.com:Tamunokuro/Portfolio.git`**
+- **CD into the cloned repo and run `git branch feature`**
+- **Run `npm init -y`**
 
 To get a local copy up and running follow these simple example steps.
 
@@ -24,8 +26,7 @@ To get a local copy up and running follow these simple example steps.
 - GIT
 
 
-## Authors
-👤 **Author1**
+## Author
 
 - GitHub: [@Tamunokuro](https://github.com/Tamunokuro)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/joshua-blue-jack)
@@ -44,7 +45,6 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
 
 ## 📝 License
 
