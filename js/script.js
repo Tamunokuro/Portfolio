@@ -61,8 +61,8 @@ const portfolioObj = [
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
-    seelive: 'https://tamunokuro.github.io/Portfolio/',
+    sourceCode: '',
+    seelive: '',
   },
   {
     id: '3',
@@ -80,8 +80,8 @@ const portfolioObj = [
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
-    seelive: 'https://tamunokuro.github.io/Portfolio/',
+    sourceCode: '',
+    seelive: '',
   },
   {
     id: '4',
@@ -99,8 +99,8 @@ const portfolioObj = [
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
-    seelive: 'https://tamunokuro.github.io/Portfolio/',
+    sourceCode: '',
+    seelive: '',
   },
 ];
 
@@ -133,10 +133,10 @@ portfolioObj.forEach((child, index) => {
   ul.classList.add('work-tools');
   child.projectTools.forEach((tool) => {
     const liElement = document.createElement('li');
-    liElement.setAttribute('class', 'tool')
+    liElement.setAttribute('class', 'tool');
     liElement.innerHTML = `${tool}`;
     ul.appendChild(liElement);
-  }) 
+  });
   const ulOrg = document.getElementById('language-list');
   ulOrg.replaceWith(ul);
 });
@@ -145,8 +145,7 @@ const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const index = e.target.dataset.set;
-    const project = portfolioObj[index]; 
-    
+    const project = portfolioObj[index];
     modalCard = `
       <div class="modal">
       <div class="card-body">
@@ -199,10 +198,10 @@ cardBtns.forEach((btn) => {
     ulElement.classList.add('work-tools');
     project.projectTools.forEach((tool) => {
       const liElement = document.createElement('li');
-      liElement.setAttribute('class', 'tool')
+      liElement.setAttribute('class', 'tool');
       liElement.innerHTML = `${tool}`;
       ulElement.appendChild(liElement);
-    }) 
+    });
     const ulOriginal = document.getElementById('language-list');
     ulOriginal.replaceWith(ulElement);
     modalContainer.style.left = '0';
