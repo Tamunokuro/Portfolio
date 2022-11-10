@@ -29,20 +29,20 @@ const portfolioObj = [
     id: '1',
     workCardClass: 'work-section work-1',
     mobileImg: '',
-    desktopImg: './img/1.Snapshoot Portfolio.png',
+    desktopImg: './img/todo-list-snippet.png',
     separatorImg: './img/separator-icon.png',
-    projectName: 'Tonic',
-    companyName: 'Canopy',
-    position: 'Back End Dev',
-    projectYear: 2015,
+    projectName: 'Minimal Todo List App',
+    companyName: 'Microverse',
+    position: 'Front End Developer',
+    projectYear: 2022,
     projectDetails:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
+      'This is an interactive todo app built with html, css and javascript to help organize your daily activities.',
+    projectTools: ['html', 'css', 'javaScript'],
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
-    seelive: 'https://tamunokuro.github.io/Portfolio/',
+    sourceCode: 'https://github.com/Tamunokuro/todo-list',
+    seelive: 'https://tamunokuro.github.io/todo-list/dist/',
   },
   {
     id: '2',
@@ -178,11 +178,11 @@ cardBtns.forEach((btn) => {
             <li class="tool">${project.projectTools[2]}</li>
             <li class="tool">${project.projectTools[3]}</li>
           </ul>
-          <a class="work-button" href='${project.seelive}' target='_blank'
+          <a class="work-button" href=""
             >See Live
             <img src="img/live-icon.png" alt="See live project icon"
           /></a>
-          <a class="work-button" href='${project.sourceCode}' target= '_blank'>See Source
+          <a class="work-button" href='${project.sourceCode}' target= '_target'>See Source
             <img src="img/github-icon.png" alt="See source code icon"
           /></a>
         </div>
