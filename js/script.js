@@ -138,7 +138,7 @@ portfolioObj.forEach((child, index) => {
 const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    const index = parseInt(e.target.dataset.set);
+    const index = e.target.dataset.set;
     const project = portfolioObj[index];
     modalCard = `
       <div class="modal">
@@ -178,11 +178,11 @@ cardBtns.forEach((btn) => {
             <li class="tool">${project.projectTools[2]}</li>
             <li class="tool">${project.projectTools[3]}</li>
           </ul>
-          <a class="work-button" href='${project.seelive}' target='_blank'
+          <a class="work-button" href=""
             >See Live
             <img src="img/live-icon.png" alt="See live project icon"
           /></a>
-          <a class="work-button" href='${project.sourceCode}' target= '_blank'>See Source
+          <a class="work-button" href='${project.sourceCode}' target= '_target'>See Source
             <img src="img/github-icon.png" alt="See source code icon"
           /></a>
         </div>
