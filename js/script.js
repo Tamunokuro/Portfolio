@@ -62,6 +62,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
   {
     id: '3',
@@ -80,6 +81,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
   {
     id: '4',
@@ -98,6 +100,7 @@ const portfolioObj = [
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
     sourceCode: 'https://github.com/Tamunokuro/Portfolio',
+    seelive: 'https://tamunokuro.github.io/Portfolio/',
   },
 ];
 
@@ -179,7 +182,7 @@ cardBtns.forEach((btn) => {
           <ul id='language-list'>
       
           </ul>
-          <a class="work-button" href="${project.seelive}" target= '_blank'
+          <a class="work-button" href='${project.seelive}' target='_blank'
             >See Live
             <img src="img/live-icon.png" alt="See live project icon"
           /></a>
@@ -212,3 +215,47 @@ cardBtns.forEach((btn) => {
     });
   });
 });
+
+// Form validation
+const form = document.querySelector('form');
+const emailInput = document.getElementById('mail');
+const mailError = document.querySelector('.error');
+
+const emailCaseChecker = () => {
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    mailError.innerText = 'Email should be in lower case';
+  } else {
+    mailError.innerText = '';
+    form.submit();
+  }
+};
+
+form.addEventListener('submit', (e) => {
+  emailCaseChecker();
+  e.preventDefault();
+});
+
+// Local Storage
+const nameInput = document.getElementById('name');
+const messageInput = document.getElementById('msg');
+
+const store = () => {
+  const contactFormData = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    message: messageInput.value.trim(),
+  };
+  localStorage.setItem('contactFormData', JSON.stringify(contactFormData));
+};
+
+nameInput.addEventListener('keyup', store);
+emailInput.addEventListener('keyup', store);
+messageInput.addEventListener('keyup', store);
+
+const contactInfo = JSON.parse(localStorage.getItem('contactFormData'));
+
+if (contactInfo) {
+  nameInput.value = contactInfo.name;
+  emailInput.value = contactInfo.email;
+  messageInput.value = contactInfo.message;
+}
