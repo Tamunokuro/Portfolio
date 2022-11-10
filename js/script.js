@@ -118,11 +118,7 @@ portfolioObj.forEach((child, index) => {
             <h3>${child.projectYear}</h3>
       </div>
       <p class="work-writeup">${child.projectDetails}</p>
-      <ul class="work-tools">
-        <li class="tool">${child.projectTools[0]}</li>
-        <li class="tool">${child.projectTools[1]}</li>
-        <li class="tool">${child.projectTools[2]}</li>
-        <li class="tool">${child.projectTools[3]}</li>
+      <ul id='language-list'>
       </ul>
       <button data-set=${[index]} class="work-button project-card-btn">${child.projectBtnText}</button>
   </div>
@@ -130,13 +126,24 @@ portfolioObj.forEach((child, index) => {
 </div>
 `;
   myportfolio.innerHTML += card;
+  const ul = document.createElement('ul');
+  ul.classList.add('work-tools');
+  child.projectTools.forEach((tool) => {
+    const liElement = document.createElement('li');
+    liElement.setAttribute('class', 'tool')
+    liElement.innerHTML = `${tool}`;
+    ul.appendChild(liElement);
+  }) 
+  const ulOrg = document.getElementById('language-list');
+  ulOrg.replaceWith(ul);
 });
 
 const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const index = e.target.dataset.set;
-    const project = portfolioObj[index];
+    const project = portfolioObj[index]; 
+    
     modalCard = `
       <div class="modal">
       <div class="card-body">
@@ -169,17 +176,14 @@ cardBtns.forEach((btn) => {
         ${project.projectDetails}
         </p>
         <div class="card-body">
-          <ul class="work-tools">
-            <li class="tool">${project.projectTools[0]}</li>
-            <li class="tool">${project.projectTools[1]}</li>
-            <li class="tool">${project.projectTools[2]}</li>
-            <li class="tool">${project.projectTools[3]}</li>
+          <ul id='language-list'>
+      
           </ul>
-          <a class="work-button" href=""
+          <a class="work-button" href="${project.seelive}" target= '_blank'
             >See Live
             <img src="img/live-icon.png" alt="See live project icon"
           /></a>
-          <a class="work-button" href='${project.sourceCode}' target= '_target'>See Source
+          <a class="work-button" href='${project.sourceCode}' target= '_blank'>See Source
             <img src="img/github-icon.png" alt="See source code icon"
           /></a>
         </div>
@@ -187,6 +191,17 @@ cardBtns.forEach((btn) => {
     </div>
       `;
     modalContainer.innerHTML = modalCard;
+
+    const ulElement = document.createElement('ul');
+    ulElement.classList.add('work-tools');
+    project.projectTools.forEach((tool) => {
+      const liElement = document.createElement('li');
+      liElement.setAttribute('class', 'tool')
+      liElement.innerHTML = `${tool}`;
+      ulElement.appendChild(liElement);
+    }) 
+    const ulOriginal = document.getElementById('language-list');
+    ulOriginal.replaceWith(ulElement);
     modalContainer.style.left = '0';
     const closeBtn = document.querySelector('.close-button');
     closeBtn.addEventListener('click', () => {
