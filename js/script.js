@@ -29,20 +29,20 @@ const portfolioObj = [
     id: '1',
     workCardClass: 'work-section work-1',
     mobileImg: '',
-    desktopImg: './img/1.Snapshoot Portfolio.png',
+    desktopImg: './img/todo-list-snippet.png',
     separatorImg: './img/separator-icon.png',
-    projectName: 'Tonic',
-    companyName: 'Canopy',
-    position: 'Back End Dev',
-    projectYear: 2015,
+    projectName: 'Minimal Todo List App',
+    companyName: 'Microverse',
+    position: 'Front End Developer',
+    projectYear: 2022,
     projectDetails:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    projectTools: ['html', 'Ruby on rails', 'css', 'javaScript'],
+      'This is an interactive todo app built with html, css and javascript to help organize your daily activities.',
+    projectTools: ['html', 'css', 'javaScript'],
     projectBtnText: 'See Project',
     modalBtnText: 'See Live',
     codeBtnText: 'See Source',
-    sourceCode: 'https://github.com/Tamunokuro/Portfolio',
-    seelive: 'https://tamunokuro.github.io/Portfolio/',
+    sourceCode: 'https://github.com/Tamunokuro/todo-list',
+    seelive: 'https://tamunokuro.github.io/todo-list/dist/',
   },
   {
     id: '2',
@@ -138,7 +138,7 @@ portfolioObj.forEach((child, index) => {
 const cardBtns = document.querySelectorAll('.project-card-btn');
 cardBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    const index = e.target.dataset.set;
+    const index = parseInt(e.target.dataset.set);
     const project = portfolioObj[index];
     modalCard = `
       <div class="modal">
