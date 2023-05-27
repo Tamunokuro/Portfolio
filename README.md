@@ -7,8 +7,9 @@
 
 ## Built With
 
-- HTML & CSS
-- LINTERS
+- Bootstrap5
+- CSS3
+- JavaScript
 
 ## Deployment link
  [Porfolio](https://tamunokuro.github.io/Portfolio/)
